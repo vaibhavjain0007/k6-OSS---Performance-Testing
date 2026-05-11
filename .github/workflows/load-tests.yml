@@ -7,6 +7,9 @@
 # pull_request: Runs on pull requests targeting main/master
 name: Load Testing with k6
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ main, master ]  # Trigger on pushes to main branches
