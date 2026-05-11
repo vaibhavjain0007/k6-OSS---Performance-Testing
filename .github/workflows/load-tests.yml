@@ -32,10 +32,12 @@ jobs:
         uses: actions/checkout@v4
 
       # Step 2: Set up k6 - Install k6 on the runner
-      # uses: Use the official k6 GitHub Action
-      # grafana/k6-action: Installs k6 binary
-      # - name: Set up k6
-      #   uses: grafana/k6-action@v1
+      # Install k6 using apt package manager (Ubuntu-based runners)
+      # This ensures k6 is available for the load test execution
+      - name: Set up k6
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y k6
 
       # Step 3: Create reports directory - Ensure output directory exists
       # Note: Although the reports/ folder exists in the repository, we create it here as a best practice
