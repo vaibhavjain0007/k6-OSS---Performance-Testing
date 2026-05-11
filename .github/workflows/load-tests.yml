@@ -90,7 +90,7 @@ jobs:
         with:
           name: k6-test-results-${{ github.run_number }}  # Unique name with run number
           path: |
-            reports/               # Upload entire reports directory (all formats)
+            reports/
             !reports/*.tmp         # Exclude temporary files (if any)
 
       # Step 6: Check test results - Validate test outcomes
