@@ -1,0 +1,112 @@
+# k6 Load Testing Project - .gitignore file
+# This file specifies which files and directories Git should ignore and not track
+
+# ============================================================================
+# Generated Reports and Outputs
+# ============================================================================
+# k6 generates various report files during test execution
+reports/results.json        # Raw metrics data from test runs
+reports/summary.json        # Test summary in JSON format
+reports/summary.html        # Generated HTML report
+reports/*.json              # Any JSON files in reports directory
+reports/*.html              # Any HTML files in reports directory
+reports/*.csv               # CSV exports if generated
+
+# ============================================================================
+# Node.js and npm (if using npm for dependencies)
+# ============================================================================
+node_modules/               # npm packages directory
+package-lock.json           # Lock file for npm dependencies
+npm-debug.log               # npm debug logs
+
+# ============================================================================
+# Environment and Configuration
+# ============================================================================
+.env                        # Environment variables (contains secrets)
+.env.local                  # Local environment overrides
+.env.*.local                # Environment-specific local configs
+config.local.js             # Local configuration file
+
+# ============================================================================
+# IDE and Editor Files
+# ============================================================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (IntelliJ, WebStorm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# VS Code specific
+.history/
+.vscode-test
+
+# ============================================================================
+# OS-Specific Files
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+
+# ============================================================================
+# Temporary and Log Files
+# ============================================================================
+*.log                       # Log files
+*.tmp                       # Temporary files
+*.bak                       # Backup files
+*.swp                       # Vim swap files
+*.swo                       # Vim swap files
+*~                          # Temporary files
+.DS_Store                   # macOS folder metadata
+
+# ============================================================================
+# Build and Distribution
+# ============================================================================
+dist/                       # Distribution directory
+build/                      # Build directory
+.cache/                     # Cache directory
+
+# ============================================================================
+# Test Coverage
+# ============================================================================
+coverage/                   # Code coverage reports
+.nyc_output/               # NYC coverage output
+
+# ============================================================================
+# Docker
+# ============================================================================
+# If using Docker, ignore docker compose overrides
+docker-compose.override.yml
+docker-compose.local.yml
+
+# ============================================================================
+# k6 Cloud (if using k6 cloud)
+# ============================================================================
+.k6                         # k6 cache directory
+loadimpact.json             # k6 cloud configuration
+
+# ============================================================================
+# Misc
+# ============================================================================
+*.pid                       # Process ID files
+*.seed                      # Random seeds
+.eslintcache                # ESLint cache
+.prettierignore             # Prettier ignore file
