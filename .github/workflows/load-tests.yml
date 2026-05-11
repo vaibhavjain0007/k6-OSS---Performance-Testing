@@ -93,6 +93,20 @@ jobs:
             reports/
             !reports/*.tmp         # Exclude temporary files (if any)
 
+      # Step: Deploy report to GitHub Pages
+      - name: Deploy report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./reports
+
+      # Step: Print report URL
+      - name: Report URL
+        run: |
+          echo "Report available at:"
+          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+
       # Step 6: Check test results - Validate test outcomes
       # run: Execute script to check if test passed
       # Use k6 exit codes: 0=pass, 99=threshold failure
