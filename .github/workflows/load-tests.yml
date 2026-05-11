@@ -34,8 +34,8 @@ jobs:
       # Step 2: Set up k6 - Install k6 on the runner
       # uses: Use the official k6 GitHub Action
       # grafana/k6-action: Installs k6 binary
-      - name: Set up k6
-        uses: grafana/k6-action@v1
+      # - name: Set up k6
+      #   uses: grafana/k6-action@v1
 
       # Step 3: Create reports directory - Ensure output directory exists
       # Note: Although the reports/ folder exists in the repository, we create it here as a best practice
