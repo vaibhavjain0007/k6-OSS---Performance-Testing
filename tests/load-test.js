@@ -42,8 +42,8 @@ export const options = {
   // Stages: Define load patterns over time
   // Each stage specifies duration and target number of VUs
   stages: [
-    { duration: '20s', target: 5 },   // Ramp up to 5 users over 20 seconds
-    { duration: '30s', target: 10 },   // Ramp up to 10 users over 30 seconds
+    { duration: '20s', target: 10 },   // Ramp up to 10 users over 20 seconds
+    { duration: '30s', target: 20 },   // Ramp up to 20 users over 30 seconds
     { duration: '10s', target: 0 },    // Ramp down to 0 users over 10 seconds
   ],
   // Thresholds: Define pass/fail criteria for the test
