@@ -131,6 +131,6 @@ export function handleSummary(data) {
     // Console output: Colored text summary
     stdout: textSummary(data, { indent: ' ', enableColors: true }),
     // File output: HTML report saved to reports directory
-    'reports/summary.html': htmlReport(data),
+    'reports/index.html': htmlReport(data),
   };
 }
